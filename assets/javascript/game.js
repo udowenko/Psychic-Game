@@ -18,39 +18,56 @@
   	userAlpha.push(userInput);
 
   	guessesLeft--;
+  	console.log(guessesLeft);
 
+			
+  	
 
 		if (userInput === randomAlphabet){
 
 			alert("You guessed correctly!");
 			wins++;
 			
-			// document.getElementById("wins").innerHTML= wins;
-			rewriteStats()
+			document.getElementById("wins").innerHTML= wins;
 			
+			var playagain= prompt("Do you want to play again? Press y");
+				if (playagain= "y" && guessesLeft=0)
+					rewriteStats();
 		}
-
 		else if (userInput !== randomAlphabet && guessesLeft >0){
 
 		alert("You guessed incorrectly. Try another key.");
 			losses++;
-			// document.getElementById("losses").innerHTML=losses;
+			 document.getElementById("losses").innerHTML=losses;
 			
+	 		 document.getElementById("gleft").innerHTML=guessesLeft;
+	 		 document.getElementById("userguesses").innerHTML=userAlpha
 			
-	 		// document.getElementById("gleft").innerHTML=guessesLeft;
-	 		rewriteStats();
-		}
-			function rewriteStats(){
-			var guessesLeft= 5;
-			var userAlpha =[];	
-			var randomAlphabet = alphabet[Math.floor(Math.random() * alphabet.length)];
-  		console.log(randomAlphabet);
-			}
+	}
+		else {
+
+		 alert("Game Over");
+		 playagain= prompt("Do you want to play again? Press y ");
+				if (playagain= true)
+					rewriteStats();
+		}	
+
+		function rewriteStats(){
+			guessesLeft= 5;
+			userAlpha =[];	
+			wins = 0;
+			losses = 0;
+			randomAlphabet = alphabet[Math.floor(Math.random() * alphabet.length)];
+			document.getElementById("losses").innerHTML=losses;
+			document.getElementById("wins").innerHTML= wins;
+	 		document.getElementById("gleft").innerHTML=guessesLeft;
+	 		document.getElementById("userguesses").innerHTML=userAlpha
+  			console.log(randomAlphabet);}
+
+	}		
+					
 
 	
-}
-	
-
 
 
 

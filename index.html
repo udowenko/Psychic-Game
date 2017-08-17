@@ -3,6 +3,7 @@
 <head>
 
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Psychic Game </title>
 	<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
@@ -11,25 +12,132 @@
 
 </head>
 
-<body>
-<h1> The Psychic Game </h1>
+<script src="assets/javascript/game.js"></script>
+
+<style>
+
+.backdrop {
+	background-color: #E0FFFF;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .rules {
+ 	text-align: center;
+ 	color: grey;
+	font-weight: bold;
+	font-size: large;
+ }
 
 
-<p> To play this game you try to guess which letter of the alphabet I am thinking of.</p>
-<br>
-<p> You have 5 guesses. Good luck! </p>
-<br>
-<p> Type a letter</p>
+.pcenter {
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+}
+/*#gleft {
+	text-align: center;
+	font-weight: bold;
+	font-size: large;
+	max-width: 50%;
+}
+*/
 
-<div "id= wins">Wins</div>
+</style>
 
-<!-- <h1 id="guessesLeftHeader"> Remaining Guesses</h1>    -->
-<div "id= losses">Losses </div>
+<body class= "backdrop">
 
-<div "id = gleft"> Guesses Left </div>
+<div class="jumbotron text-center">
+  <h1>The Psychic Game</h1>
+
+</div>
+
+<div class="col-md-12">
+
+	<img class= "center" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThpN2z54GCTLb3qE9JEtQ5QVbtL-DEj33eYbrFNPbtKMFs4T9k" alt="crystal ball" style="width:150px;height:150px;">
+	<br>
+	<br>
+
+</div>
+
+<div class= "col-md-12">
+	<h1 class="rules"> To play this game you try to guess which letter of the alphabet the magic ball sees. You have 5 attempts to guess correctly.</h1>
+	<br>
+	<h1 class="rules"> To begin type the letter of your guess.</h1>
+	<br>
+	<h1 class="rules"> Good Luck!</h1>
+	<br>
+	<br>
+	<br>
+</div>
 
 
-<script type="text/javascript" src = "assets/javascript/game.js"></script>
+<div class="row">
+	<div class= "col-md-6">
+		<p class= "pcenter phead"> Wins </p>
+	</div>
+
+	<div class= "col-md-6">
+		<p class= "pcenter phead"> Losses </p>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class= "col-md-6">
+		<p class= "pcenter" id="wins"> </p>
+		<br>
+	
+		
+	</div>
+
+	<div class= "col-md-6">
+		<p class="pcenter" id="losses"> </p>
+		<br>
+	
+		
+	</div>
+
+</div>
+
+<div class ="row">
+
+	<div class="col-md-12">
+		<p class= "pcenter phead"> Guesses Left </p>
+	</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<p class="pcenter" id="gleft"> </p>
+	</div>
+	<br>
+	<br>
+	<br>
+</div>
+
+<div class ="row">
+
+	<div class="col-md-12">
+		<p class= "pcenter phead"> Your Guesses </p>
+	</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<p class="pcenter" id="userguesses"> </p>
+	</div>
+</div>
+
+
+</div>
+
 </body>
+<html>
 
-</html>
+
+
+
+
