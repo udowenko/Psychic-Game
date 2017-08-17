@@ -25,16 +25,16 @@
 
 		if (userInput === randomAlphabet){
 
-			alert("You guessed correctly!");
+			alert("You guessed correctly!! You Win!");
 			wins++;
 			
 			document.getElementById("wins").innerHTML= wins;
-			
-			var playagain= prompt("Do you want to play again? Press y");
-				if (playagain= "y" && guessesLeft=0)
-					rewriteStats();
+
+			var playagain= prompt("Do you want to play again? Press 'y' ");
+			if (playagain === "y")
+			rewriteStats();
 		}
-		else if (userInput !== randomAlphabet && guessesLeft >0){
+		else if (userInput !== randomAlphabet && guessesLeft !==-1){
 
 		alert("You guessed incorrectly. Try another key.");
 			losses++;
@@ -47,16 +47,16 @@
 		else {
 
 		 alert("Game Over");
-		 playagain= prompt("Do you want to play again? Press y ");
-				if (playagain= true)
+		 var playagain= prompt("Do you want to play again? Press 'y' ");
+			if (playagain === "y")
 					rewriteStats();
 		}	
 
 		function rewriteStats(){
 			guessesLeft= 5;
 			userAlpha =[];	
-			wins = 0;
-			losses = 0;
+			wins=0;
+			losses=0;
 			randomAlphabet = alphabet[Math.floor(Math.random() * alphabet.length)];
 			document.getElementById("losses").innerHTML=losses;
 			document.getElementById("wins").innerHTML= wins;
